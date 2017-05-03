@@ -1,0 +1,168 @@
+/* line 28, style.scss */
+html, body, h1, h2, h3, main, section, p, ul, li, a, hr, cite, div {
+  font-family: "Lora";
+  font-size: 1em;
+  line-height: 1.8em;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* line 43, style.scss */
+body {
+  background: #ffeb3b;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 960px) {
+  /* line 43, style.scss */
+  body {
+    display: block;
+  }
+}
+/* line 50, style.scss */
+body main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: lightUp 2s linear;
+  margin: 0;
+  padding: 0 10% 0 5%;
+}
+@media (max-width: 960px) {
+  /* line 50, style.scss */
+  body main {
+    height: auto;
+    width: auto;
+    position: static;
+    padding: 8%;
+    animation: none;
+  }
+}
+/* line 71, style.scss */
+body main h1 {
+  font-family: "Oswald";
+  font-size: 4em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 77, style.scss */
+body main hr {
+  width: 20%;
+  height: 0.6em;
+  background: #000000;
+  margin-bottom: 3em;
+}
+/* line 83, style.scss */
+body main h2, body main a {
+  font-weight: bold;
+}
+/* line 86, style.scss */
+body main h2, body main p, body main a {
+  font-size: 1rem;
+}
+/* line 89, style.scss */
+body main .description {
+  margin-bottom: 2em;
+}
+/* line 93, style.scss */
+body .browse {
+  background: #000000;
+  padding: 3% 5%;
+  width: 50%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  transform: translate(-100vw);
+  transform-origin: left center;
+  animation: shift 1.4s 0.6s forwards cubic-bezier(0.77, 0, 0.175, 1);
+}
+@media (max-width: 960px) {
+  /* line 93, style.scss */
+  body .browse {
+    height: auto;
+    width: auto;
+    animation: none;
+    transform: translate(0);
+  }
+}
+/* line 109, style.scss */
+body .browse ul {
+  animation: lightUp 2s 0.6s linear;
+}
+@media (max-width: 960px) {
+  /* line 109, style.scss */
+  body .browse ul {
+    animation: none;
+  }
+}
+/* line 115, style.scss */
+body .browse li {
+  border-bottom: 1px solid white;
+  transition: box-shadow 0.3s;
+  padding: 1.5em 0;
+}
+/* line 119, style.scss */
+body .browse li:hover {
+  box-shadow: inset 0 -0.5em white;
+}
+/* line 122, style.scss */
+body .browse li .type {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+/* line 128, style.scss */
+body .browse h3, body .browse p {
+  text-decoration: uppercase;
+  color: white;
+  font-weight: bold;
+  font-family: "Oswald";
+  font-size: 1.2em;
+  line-height: 1.3em;
+}
+/* line 136, style.scss */
+body .browse h3 {
+  color: #ffeb3b;
+}
+/* line 139, style.scss */
+body .browse cite {
+  font-style: italic;
+  color: white;
+  font-size: 0.8em;
+  line-height: 1.3em;
+  word-spacing: 0.2em;
+  text-align: right;
+}
+
+@keyframes shift {
+  from {
+    transform: translate(-110vw) scaleX(1.2);
+  }
+  to {
+    transform: translate(0) scaleX(1);
+  }
+}
+@keyframes lightUp {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
